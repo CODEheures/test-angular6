@@ -36,6 +36,9 @@ export class TestComponent implements OnInit {
 
   public friends = ['marie', 'tof', 'yannick', 'daz']
 
+  public pipeMessage = 'Bienvenu sur cette page'
+  public date = new Date()
+
   ngOnInit() {
     this.bindingWord = 'hello'
     this.btnMessage = this.msg.lock

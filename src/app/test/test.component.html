@@ -36,3 +36,25 @@
 <div *ngFor="let friend of friends; index as i; first as f; last as l; odd as o; even as e">
   <p>{{ i }}. {{ friend }} (first: {{f}}, last: {{l}}, impair: {{o}}, pair: {{e}})</p>
 </div>
+
+<p>{{ pipeMessage }}</p>
+<p>{{ pipeMessage | lowercase }}</p>
+<p>{{ pipeMessage | uppercase }}</p>
+<p>{{ pipeMessage | titlecase }}</p>
+<p>{{ pipeMessage | slice:3:10 }}</p>
+<p>{{ personnal | json }}</p>
+<p>{{ 3.14159 | number:'1.2-3' }}</p>
+<p>{{ 3.14159 | number:'3.6-8' }}</p>
+<p>{{ 3.14159 | number:'3.1-2' }}</p>
+<p>{{ 0.2556 | percent:'1.2-5' }}</p>
+<p>{{ 0.2556 | currency:'EUR' }}</p>
+<p>{{ date }}</p>
+<p>{{ date | date:'short' }}</p>
+<p>{{ date | date:'shortDate' }}</p>
+<p>{{ date | date:'shortTime' }}</p>
+<p>{{ date | date:'medium' }}</p>
+<p>{{ date | date:'mediumDate' }}</p>
+<p>{{ date | date:'mediumTime' }}</p>
+<p>{{ date | date:'long' }}</p>
+<p>{{ date | date:'longDate' }}</p>
+<p>{{ date | date:'longTime' }}</p>
