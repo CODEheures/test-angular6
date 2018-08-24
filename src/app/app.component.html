@@ -1,1 +1,2 @@
-<app-test></app-test>
+<p>L'enfant répond: {{ childResponse }}</p>
+<app-test (childMessage)="childResponse = $event" [parentData]="name"></app-test>

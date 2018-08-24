@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core'
 
 @Component({
   selector: 'app-test',
@@ -13,6 +13,9 @@ export class TestComponent implements OnInit {
   }
 
   constructor() { }
+
+  @Input() public parentData
+  @Output() public childMessage = new EventEmitter()
 
   public bindingWord: string
 
@@ -66,6 +69,10 @@ export class TestComponent implements OnInit {
 
   hideText2() {
     this.isHidden = true
+  }
+
+  sendResponse() {
+    this.childMessage.emit('bonjour app module!')
   }
 
 }
