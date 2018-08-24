@@ -24,6 +24,8 @@ export class TestComponent implements OnInit {
     'text-error': this.isDanger
   }
 
+  public twoWayBindingValue = ''
+
   ngOnInit() {
     this.bindingWord = 'hello'
     this.btnMessage = this.msg.lock
