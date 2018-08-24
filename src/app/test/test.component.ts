@@ -31,6 +31,8 @@ export class TestComponent implements OnInit {
 
   public color = 'orange'
 
+  public friends = ['marie', 'tof', 'yannick', 'daz']
+
   ngOnInit() {
     this.bindingWord = 'hello'
     this.btnMessage = this.msg.lock
