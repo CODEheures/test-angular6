@@ -1,7 +1,24 @@
 <p [ngClass]="personnal">
   test works with binding word: {{bindingWord}}!
 </p>
-<input type="text" value="mon texte" [disabled]="isDanger">
+<div>
+  <input type="text" value="mon texte" [disabled]="isDanger">
 <button (click)="btnClick()">{{btnMessage}}</button>
 <input [(ngModel)]="twoWayBindingValue" type="text">
 {{twoWayBindingValue}}
+</div>
+
+
+<p *ngIf="!isHide">Essaye de me cacher</p>
+<p *ngIf="isHide">Je suis caché! :-)</p>
+<button (click)="hideText()">Cacher le texte</button>
+
+<div *ngIf="!isHidden; then thenBlock; else elseBlock"></div>
+<ng-template #thenBlock>
+  <p>Moi aussi essaye de me cacher</p>
+</ng-template>
+<ng-template #elseBlock>
+  <p>Moi aussi je suis caché! :-)</p>
+</ng-template>
+
+<button (click)="hideText2()">Cacher aussi ce texte</button>

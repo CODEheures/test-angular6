@@ -26,6 +26,10 @@ export class TestComponent implements OnInit {
 
   public twoWayBindingValue = ''
 
+  public isHide = false
+  public isHidden = false
+
+
   ngOnInit() {
     this.bindingWord = 'hello'
     this.btnMessage = this.msg.lock
@@ -51,6 +55,14 @@ export class TestComponent implements OnInit {
     } else {
       if ('text-italic' in this.personnal) { delete this.personnal['text-italic'] }
     }
+  }
+
+  hideText() {
+    this.isHide = true
+  }
+
+  hideText2() {
+    this.isHidden = true
   }
 
 }
