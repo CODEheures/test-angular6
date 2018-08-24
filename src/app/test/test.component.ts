@@ -29,6 +29,7 @@ export class TestComponent implements OnInit {
   public isHide = false
   public isHidden = false
 
+  public color = 'orange'
 
   ngOnInit() {
     this.bindingWord = 'hello'

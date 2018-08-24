@@ -22,3 +22,10 @@
 </ng-template>
 
 <button (click)="hideText2()">Cacher aussi ce texte</button>
+
+<div [ngSwitch]="color">
+  <p *ngSwitchCase="'red'">La couleur est initialisée à rouge</p>
+  <p *ngSwitchCase="'blue'">La couleur est initialisée à bleue</p>
+  <p *ngSwitchCase="'green'">La couleur est initialisée à verte</p>
+  <p *ngSwitchDefault>La couleur est initialisée inconnue</p>
+</div>
