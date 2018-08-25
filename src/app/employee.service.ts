@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Employee } from './employee';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
 
-  constructor() { }
+  private _url = 'https://jsonplaceholder.typicode.com/users'
 
-  getEmployees() {
-    return [
-      {id: 1, name: 'jean', age: 18},
-      {id: 2, name: 'paul', age: 24},
-      {id: 3, name: 'matteo', age: 8},
-      {id: 4, name: 'zia', age: 35}
-    ]
+  constructor(private http: HttpClient ) { }
+
+  getEmployees(): Observable<Employee[]> {
+    return this.http.get<Employee[]>(this._url)
   }
 }
