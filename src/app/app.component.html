@@ -1,5 +1,10 @@
-<app-employe-list></app-employe-list>
-<app-employe-list-detail></app-employe-list-detail>
+<nav>
+    <a [routerLink]="['/']" routerLinkActive="router-link-active">Home</a>
+     |
+    <a [routerLink]="['/users']" routerLinkActive="router-link-active">Users List Page</a>
+     |
+    <a [routerLink]="['/todos']" routerLinkActive="router-link-active" >Todos List Page</a>
 
-<p>L'enfant répond: {{ childResponse }}</p>
-<app-test (childMessage)="childResponse = $event" [parentData]="name"></app-test>
+</nav>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,12 @@
+.nav a {
+    padding: 5px;
+    border: 1px solid rgba(42, 42, 42, 0.342);
+}
+
+.nav a:visited {
+    color: #2d5b72    
+}
+
+.router-link-active {
+    color: #039be5    
+}
