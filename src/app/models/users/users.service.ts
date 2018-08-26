@@ -16,6 +16,12 @@ export class UsersService {
                     .pipe(catchError(this.errorHandler));
     }
 
+    getUser(id: string): Observable<User> {
+        return this.httpClient
+                    .get<User>('https://jsonplaceholder.typicode.com/users/' + id)
+                    .pipe(catchError(this.errorHandler));
+    }
+
 
     errorHandler(error: HttpErrorResponse) {
         return throwError(error.message || 'server error')
