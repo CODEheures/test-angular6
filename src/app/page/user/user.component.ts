@@ -35,4 +35,8 @@ export class UserComponent implements OnInit {
     this._router.navigate(['/users', {id: this.user.id}])
   }
 
+  address() {
+    this._router.navigate(['address'], {relativeTo: this._route})
+  }
+
 }
