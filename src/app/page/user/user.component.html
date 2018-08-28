@@ -1,6 +1,7 @@
-<p>
-  User {{ user.id }}: {{ user | json}}
+<p *ngIf="user">
+  User {{ user.id }} {{ user | json}}
 </p>
 <p><a (click)="goBack()">Précédent</a><span> |  </span><a (click)="goNext()">Suivant</a> | <button (click)="address()">Address</button></p>
 <p><button (click)="returnToList()">Liste des utilisateurs</button></p>
 
+<router-outlet></router-outlet>

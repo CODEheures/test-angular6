@@ -1,3 +1,4 @@
-<p>
-  address works!
+<p *ngIf="user">
+  address of user is {{ user.address | json }}
 </p>
+<p *ngIf="msgError">{{ msgError }}</p>
